@@ -15,7 +15,18 @@ public class Stove {
 	}
 	
 	public void displayStove(){
-		
+		System.out.println("Stove-----------");
+		boolean hot = false;
+		for (Burner burn : burners){
+			if (burn.getTemperature() == Burner.Temperature.HOT){
+				hot = true;
+			}
+			burn.displayBurner();
+		}
+		if (hot){
+			System.out.println("RED LIGHT - HOT BURNER");
+		}
+		System.out.println();
 	}
 	
 	public void timePassing(int minutes){

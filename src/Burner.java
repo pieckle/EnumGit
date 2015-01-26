@@ -3,7 +3,7 @@ public class Burner {
 	
 	final static int TIME_DURATION = 3;
 	
-	private enum Temperature { HOT, WARM, COLD };
+	enum Temperature { HOT, WARM, COLD };
 	
 	private Temperature temp;
 	private Setting set;
@@ -32,7 +32,18 @@ public class Burner {
 	}
 	
 	public void displayBurner(){
-		
+		System.out.print(set + ".....");
+		switch (temp){
+		case HOT:
+			System.out.println("HOT");
+			break;
+		case WARM:
+			System.out.println("Warm");
+			break;
+		case COLD:
+			System.out.println("cool");
+			break;
+		}
 	}
 
 }
