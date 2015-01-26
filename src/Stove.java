@@ -3,6 +3,14 @@ import java.util.ArrayList;
 
 public class Stove {
 	
+	public static void main(String[] bunsen){
+		Stove stove = new Stove();
+		stove.displayStove();
+		stove.setBurners();
+		stove.timePassing(8);
+		stove.displayStove();
+	}
+	
 	private final int NUMBER_OF_BURNERS = 4;
 	
 	private ArrayList<Burner> burners;
@@ -30,7 +38,11 @@ public class Stove {
 	}
 	
 	public void timePassing(int minutes){
-		
+		for (int x = 0; x < minutes; x++){
+			for (Burner burn : burners){
+				burn.updateTemperature();
+			}
+		}
 	}
 	
 	public void setBurners() {

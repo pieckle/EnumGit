@@ -69,7 +69,7 @@ public class Burner {
 	}
 	
 	public void displayBurner(){
-		System.out.print(set.toString() + ".....");
+		System.out.print("[" + set.toString() + "].....");
 		switch (temp){
 		case HOT:
 			System.out.println("HOT");
